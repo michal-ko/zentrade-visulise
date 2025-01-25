@@ -10,7 +10,7 @@ COLUMNS = ["open","high","low","close","volume","close_time","quote_volume","tra
 def load_data():
     # Read CSV without automatic date parsing
     df = pd.read_csv(
-        "../../output/market_data_BTCUSDT_15m.csv",
+        "output/market_data_BTCUSDT_15m.csv",
         dtype={col: 'float32' for col in COLUMNS},
     )
 
