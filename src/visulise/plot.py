@@ -30,6 +30,7 @@ raw_df = load_data()
 
 st.title("BTCUSDT Market Data - 15min interval")
 st.write(f"Last updated at: {raw_df['timestamp'].max()}")
+st.logo("misc/logo.jpg", size="large")
 st.sidebar.header("Visualization Options")
 
 chart_option = st.sidebar.selectbox("Chart type:", ("Candlestick", "Individual metric"))
