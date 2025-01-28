@@ -7,7 +7,7 @@ import streamlit as st
 TIMEZONE = 'Europe/Warsaw'
 COLUMNS = ["open","high","low","close","volume","close_time","quote_volume","trades","taker_buy_base","taker_buy_quote","ignore"]
 
-@st.cache_data(ttl='1h')
+@st.cache_data(ttl=timedelta(minutes=8))
 def load_data():
     # Read CSV without automatic date parsing
     df = pd.read_csv(
